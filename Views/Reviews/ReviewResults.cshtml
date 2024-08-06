@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Review Results";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h3>Reviews for Product ID: @ViewBag.ProductId</h3>
+
+@if (ViewBag.Reviews != null)
+{
+    <ul>
+        @foreach (var review in ViewBag.Reviews)
+        {
+            <li>@review</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No reviews found.</p>
+}

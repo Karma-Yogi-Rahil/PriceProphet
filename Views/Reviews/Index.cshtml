@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Price Prophet";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.Error
+    </div>
+}
+
+<form asp-action="FetchReviews" method="post">
+    <div class="form-group">
+        <label for="productLink">Enter Amazon Product Link</label>
+        <input type="text" class="form-control" id="productLink" name="productLink" required />
+    </div>
+    <button type="submit" class="btn-primary">Search</button>
+</form>
+
